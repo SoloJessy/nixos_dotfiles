@@ -40,7 +40,9 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAliases = {};
+    shellAliases = {
+      ls = "eza -la"
+    };
   };
 
   home.stateVersion = "25.05";
