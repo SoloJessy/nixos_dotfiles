@@ -117,7 +117,7 @@
   environment.systemPackages = with pkgs; [
     helix
     git
-    starship
+    # starship
   ];
 
 

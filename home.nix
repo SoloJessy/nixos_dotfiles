@@ -14,6 +14,8 @@
     btop
     iotop
     iftop
+
+    starship
   ];
 
   programs.git = {
