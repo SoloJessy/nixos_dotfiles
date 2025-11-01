@@ -18,8 +18,8 @@
 
   programs.git = {
     enable = true;
-    userName = "Sam Bartley";
-    userEmail = "SoloJessy.rs@gmail.com";
+    config.user.name = "Sam Bartley";
+    config.user.email = "SoloJessy.rs@gmail.com";
   };
 
   programs.starship = {
@@ -36,5 +36,6 @@
     enableCompletion = true;
     shellAliases = {};
   };
+
   home.stateVersion = "25.05";
 }
