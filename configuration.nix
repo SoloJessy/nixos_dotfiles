@@ -3,10 +3,13 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
+let
+  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
 {
   imports =
     [ # Include the results of the hardware scan.
-      <home-manager/nixos>
+      # <home-manager/nixos>
+      (import "${home-manager}/nixos")
       ./hardware-configuration.nix
     ];
 
@@ -119,7 +122,6 @@
     git
     # starship
   ];
-
 
   system.stateVersion = "25.05"; # Did you read the comment?
 
