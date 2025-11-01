@@ -42,7 +42,7 @@
     enableCompletion = true;
     shellAliases = {
       ls = "eza -la";
-      bt = "btop"
+      bt = "btop";
     };
   };
 
