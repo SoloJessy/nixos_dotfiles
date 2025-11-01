@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   home.username = "jessy";
-  home.homeDirectory  "/home/jessy";
+  home.homeDirectory = "/home/jessy";
 
   home.pakages = with pkgs; [
     neofetch
