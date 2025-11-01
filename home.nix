@@ -41,7 +41,7 @@
     enable = true;
     enableCompletion = true;
     shellAliases = {
-      ls = "eza -la"
+      ls = "eza -la";
     };
   };
 
