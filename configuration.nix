@@ -116,7 +116,6 @@
   environment.systemPackages = with pkgs; [
     helix
     git
-    # starship
   ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
