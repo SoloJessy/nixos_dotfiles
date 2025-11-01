@@ -3,7 +3,7 @@
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
-  home.pakages = with pkgs; [
+  home.packages = with pkgs; [
     neofetch
     nnn
 
