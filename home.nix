@@ -15,7 +15,7 @@
     iotop
     iftop
 
-    starship
+    # starship
   ];
 
   programs.git = {
