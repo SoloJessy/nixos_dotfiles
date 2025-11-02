@@ -21,10 +21,6 @@
     enable = true;
     userName = "Sam Bartley";
     userEmail = "SoloJessy.rs@gmail.com";
-    # settings = {
-    #   user.name = "Sam Bartley";
-    #   user.email = "SoloJessy.rs@gmail.com";
-    # };
   };
 
   programs.starship = {
