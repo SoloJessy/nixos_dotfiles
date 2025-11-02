@@ -18,9 +18,6 @@
     firefox
     helix
     git
-  ];
-
-  users.users.jessy.packages = with pkgs; [
     discord
   ];
 }
