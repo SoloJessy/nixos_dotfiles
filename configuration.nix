@@ -22,5 +22,4 @@
   users.users.jessy.packages = with pkgs; [
     discord
   ];
-
 }
