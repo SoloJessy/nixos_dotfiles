@@ -23,6 +23,6 @@
     firefox
     libreoffice
     hunspell
-    hunspellDicts.uk_EN
+    hunspellDicts.en_UK
   ];
 }
