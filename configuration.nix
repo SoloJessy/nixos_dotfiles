@@ -15,9 +15,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    firefox
+    # Dev programs
     helix
     git
-    discord
+
+    #General System Wide Programs
+    firefox
+    libreoffice
+    hunspell
+    hunspellDicts.uk_EN
   ];
 }
