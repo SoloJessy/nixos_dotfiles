@@ -4,7 +4,6 @@
   home.homeDirectory = "/home/jessy";
 
   home.packages = with pkgs; [
-    neofetch
     nnn
 
     eza
