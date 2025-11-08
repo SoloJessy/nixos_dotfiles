@@ -77,7 +77,7 @@
           };
         };
         prettier-md = {
-          command = "${pkgs.prettier}/bin/prettier";
+          command = "${pkgs.nodePackages.prettier}/bin/prettier";
           args = [ "--parser" "markdown" "--prose-wrap" "never" ];
           auto-format = true;
         };
