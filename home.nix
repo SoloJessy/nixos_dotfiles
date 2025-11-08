@@ -55,12 +55,10 @@
     enableBashIntegration = true;
     extraOptions = [
       "--colour-scale=all"
-      "--colour-scale-mode=gradiant"
+      "--colour-scale-mode=gradient"
       "--icons=always"
-      
       "--all"
       "--group-directories-first"
-      
       "--long"
       "--smart-group"
       "--header"
