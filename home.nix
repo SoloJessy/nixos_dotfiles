@@ -28,14 +28,14 @@
       language = [
         {
           name = "rust";
-          language-servers = "rust-analyzer";
+          language-servers = [ "rust-analyzer" ];
           file-types = [ "rs" ];
           auto-format = true;
           formatter.command = "${pkgs.rustfmt}/bin/rustfmt";
         }
         {
           name = "nix";
-          language-servers = "nil";
+          language-servers = ["nil"];
           auto-format = true;
           formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
         }
