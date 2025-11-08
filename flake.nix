@@ -31,9 +31,9 @@
               "rust-src"
               "rustc"
               "rustfmt"
-              "gcc"
             ])
             pkgs.rust-analyzer
+            pkgs.gcc
           ];
         })
       ];
