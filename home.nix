@@ -89,6 +89,7 @@
     settings = {
       dialect = "uk";
       inline_height = "10";
+      enter_accept = true;
     };
   };
 
