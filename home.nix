@@ -7,7 +7,7 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = with pkgs; [ nil marksman ];
+    extraPackages = with pkgs; [ nil marksman prettier ltex-ls-plus ];
     settings = {
       theme = "monokai_pro_spectrum";
       editor = {
@@ -44,10 +44,11 @@
         {
           name = "markdown";
           file-types = [ ".md" ];
-          language-servers = [ "marksman" ];
+          language-servers = [ "marksman" "ltex-ls-plus" ];
           soft-wrap.enable = true;
           soft-wrap.wrap-indicator = "";
           soft-wrap.wrap-at-text-width = true;
+          formatter = "prettier-md";
         }
       ];
       language-server = {
@@ -55,6 +56,25 @@
           command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
           checkOnSave.command = "${pkgs.clippy}/bin/clippy";
           procMacro.enable = true;
+        };
+        marksman = { command = "${pkgs.marksman}/bin/marksman"; };
+        ltex-ls-plus = {
+          command = "${pkgs.ltex-ls-plus}/bin/ltex-ls-plus";
+          ltex.diagnosticSeverity = "warning";
+          ltex.ltex-ls.logLevel = "warning";
+          ltex.disabledRules = {
+            "en-US" = [ "PROFANITY" ];
+            "en_GB" = [ "PROFANITY" ];
+          };
+          ltex.dictionary = {
+            "en-US" = [ "builtin" ];
+            "en-GB" = [ "builtin" ];
+          };
+        };
+        prettier-md = {
+          command = "${pkgs.prettier}/bin/prettier";
+          args = [ "--parser" "markdown" "--prose-wrap" "never" ];
+          auto-format = true;
         };
       };
     };
