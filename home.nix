@@ -10,11 +10,20 @@
     extraPackages = with pkgs; [ nil ];
     settings = {
       theme = "monokai_pro_spectrum";
-      editor.cursor-shape = {
-        normal = "block";
-        insert = "bar";
-        select = "underline";
+      editor = {
+        line-number = "relative";
+        rulers = [ 80 ];
+        bufferline = "multiple";
+        color-modes = true;
+        cursor-shape = {
+          normal = "block";
+          insert = "bar";
+          select = "underline";
+        };
+        auto-save.focus-lost = true;
+        indent-guides.render = true;
       };
+
     };
     languages = {
       language = [
