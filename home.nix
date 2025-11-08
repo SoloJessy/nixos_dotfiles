@@ -24,7 +24,6 @@
         select = "underline";
       };
     };
-    settings.theme = "monokai_pro_spectrum"
     languages = {
       language = [
         {
@@ -36,7 +35,7 @@
         }
         {
           name = "nix";
-          language-servers = "nil"
+          language-servers = "nil";
           auto-format = true;
           formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
         }
@@ -46,9 +45,9 @@
           command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
           checkOnSave.command = "${pkgs.clippy}/bin/clippy";
           procMacro.enable = true;
-        }
-      }
-    }
+        };
+      };
+    };
   };
 
   programs.atuin = {
@@ -56,12 +55,12 @@
     settings = {
       dialect = "uk";
       inline_height = "10";
-    }
+    };
   };
 
   programs.eza = {
     enable = true;
-    enableBashIntergration = true;
+    enableBashIntegration = true;
     extraOptions = [
       "--colour-scale=all"
       "--colour-scale-mode=gradiant"
