@@ -1,21 +1,13 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
-  home.packages = with pkgs; [
-    nnn
-    fzf
-    ripgrep
-    btop
-  ];
+  home.packages = with pkgs; [ nnn fzf ripgrep btop ];
 
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = with pkgs; [
-      nil
-    ];
+    extraPackages = with pkgs; [ nil ];
     settings = {
       theme = "monokai_pro_spectrum";
       editor.cursor-shape = {
@@ -35,7 +27,7 @@
         }
         {
           name = "nix";
-          language-servers = ["nil"];
+          language-servers = [ "nil" ];
           auto-format = true;
           formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
         }
@@ -93,7 +85,7 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAliases = {};
+    shellAliases = { };
   };
 
   home.stateVersion = "25.05";
