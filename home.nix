@@ -111,7 +111,7 @@
 
   programs.bat = {
     enable = true;
-    theme = "onehalfdark";
+    config = { theme = "onehalfdark"; };
   };
 
   programs.zoxide = {
