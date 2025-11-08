@@ -15,6 +15,7 @@
         rulers = [ 80 ];
         bufferline = "multiple";
         color-modes = true;
+        mouse = false;
         cursor-shape = {
           normal = "block";
           insert = "bar";
