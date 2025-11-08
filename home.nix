@@ -7,7 +7,12 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = with pkgs; [ nil marksman prettier ltex-ls-plus ];
+    extraPackages = with pkgs; [
+      nil
+      marksman
+      nodePackages.prettier
+      ltex-ls-plus
+    ];
     settings = {
       theme = "monokai_pro_spectrum";
       editor = {
