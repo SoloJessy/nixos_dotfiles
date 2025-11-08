@@ -42,13 +42,14 @@
         }
         {
           name = "nix";
+          file-types = [ "nix" ];
           language-servers = [ "nil" ];
           auto-format = true;
           formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
         }
         {
           name = "markdown";
-          file-types = [ ".md" ];
+          file-types = [ "md" ];
           language-servers = [ "marksman" "ltex-ls-plus" ];
           soft-wrap.enable = true;
           soft-wrap.wrap-indicator = "";
@@ -57,7 +58,7 @@
             command = "${pkgs.nodePackages.prettier}/bin/prettier";
             args = [ "--parser" "markdown" "--prose-wrap" "never" ];
             auto-format = true;
-        };
+          };
         }
       ];
       language-server = {
