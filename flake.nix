@@ -11,8 +11,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, fenix, ... }@inputs:
-  {
+  outputs = { self, nixpkgs, home-manager, fenix, ... }@inputs: {
     nixosConfigurations.nixos-old = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -25,15 +24,16 @@
         }
         ({ pkgs, ... }: {
           nixpkgs.overlays = [ fenix.overlays.default ];
-          environment.systemPackages = [
-            (pkgs.fenix.complete.withComponents [
+          environment.systemPackages = with pkgs; [
+            (fenix.complete.withComponents [
               "cargo"
               "clippy"
               "rust-src"
               "rustc"
               "rustfmt"
+              "gcc"
             ])
-            pkgs.rust-analyzer
+            rust-analyzer
           ];
         })
       ];
