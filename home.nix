@@ -7,7 +7,7 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = with pkgs; [ nil ];
+    extraPackages = with pkgs; [ nil marksman ];
     settings = {
       theme = "monokai_pro_spectrum";
       editor = {
@@ -40,6 +40,14 @@
           language-servers = [ "nil" ];
           auto-format = true;
           formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
+        }
+        {
+          name = "markdown";
+          file-types = [ ".md" ];
+          language-servers = [ "marksman" ];
+          soft-wrap.enable = true;
+          soft-wrap.wrap-indicator = "";
+          soft-wrap.wrap-at-text-width = true;
         }
       ];
       language-server = {
