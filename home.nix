@@ -2,7 +2,7 @@
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
-  home.packages = with pkgs; [ nnn fzf ripgrep btop ];
+  home.packages = with pkgs; [ nnn fzf ripgrep btop hexyl ]; # broot
 
   programs.helix = {
     enable = true;
@@ -109,6 +109,26 @@
     ];
   };
 
+  programs.bat = {
+    enable = true;
+    theme = "onehalfdark";
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+    options = [ "--cmd cd" ];
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options = {
+      side-by-side = true;
+      line-numbers = true;
+    };
+  };
+
   programs.git = {
     enable = true;
     userName = "Sam Bartley";
@@ -127,7 +147,7 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAliases = { };
+    shellAliases = { cat = "bat -s"; };
   };
 
   home.stateVersion = "25.05";
