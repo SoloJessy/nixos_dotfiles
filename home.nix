@@ -53,7 +53,11 @@
           soft-wrap.enable = true;
           soft-wrap.wrap-indicator = "";
           soft-wrap.wrap-at-text-width = true;
-          formatter = "prettier-md";
+          formatter = {
+            command = "${pkgs.nodePackages.prettier}/bin/prettier";
+            args = [ "--parser" "markdown" "--prose-wrap" "never" ];
+            auto-format = true;
+        };
         }
       ];
       language-server = {
@@ -75,11 +79,6 @@
             "en-US" = [ "builtin" ];
             "en-GB" = [ "builtin" ];
           };
-        };
-        prettier-md = {
-          command = "${pkgs.nodePackages.prettier}/bin/prettier";
-          args = [ "--parser" "markdown" "--prose-wrap" "never" ];
-          auto-format = true;
         };
       };
     };
