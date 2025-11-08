@@ -2,7 +2,7 @@
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
-  home.packages = with pkgs; [ nnn fzf ripgrep btop hexyl ]; # broot
+  home.packages = with pkgs; [ nnn fzf ripgrep btop hexyl delta ]; # broot
 
   programs.helix = {
     enable = true;
@@ -120,14 +120,14 @@
     options = [ "--cmd cd" ];
   };
 
-  programs.delta = {
-    enable = true;
-    enableGitIntegration = true;
-    options = {
-      side-by-side = true;
-      line-numbers = true;
-    };
-  };
+  # programs.delta = {
+  #   enable = true;
+  #   enableGitIntegration = true;
+  #   options = {
+  #     side-by-side = true;
+  #     line-numbers = true;
+  #   };
+  # };
 
   programs.git = {
     enable = true;
