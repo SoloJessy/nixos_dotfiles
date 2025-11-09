@@ -15,7 +15,6 @@
     # Dev programs
     helix
     git
-    delta
 
     #General System Wide Programs
     firefox
