@@ -32,7 +32,7 @@
               "rustc"
               "rustfmt"
             ])
-            pkgs.rust-analyzer
+            pkgs.rust-analyzer-nightly
             pkgs.gcc
           ];
         })
