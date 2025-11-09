@@ -142,7 +142,7 @@
         dark = true;
       };
       merge = { conflictStyle = "zdiff3"; };
-    # };
+    };
   };
 
   programs.starship = {
