@@ -151,8 +151,18 @@
     settings = {
       format = lib.concatStrings [
         "$line_break"
-        "$package"
+        "$git_branch"
+        "$git_commit"
+        "$git_state"
+        "$git_metrics"
+        "$git_status"
         "$line_break"
+        "$directory"
+        "$time"
+        "$battery"
+        "$rust"
+        "$line_break"
+        "$status"
         "$character"
       ];
     };
