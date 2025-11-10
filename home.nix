@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lib, ... }: {
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
@@ -147,10 +147,14 @@
 
   programs.starship = {
     enable = true;
+    enableInteractive = true;
     settings = {
-      add_newline = false;
-      aws.disabled = true;
-      line_break.disabled = true;
+      format = lib.concatStrings [
+        "$line_break"
+        "$package"
+        "$line_break"
+        "$character"
+      ];
     };
   };
 
