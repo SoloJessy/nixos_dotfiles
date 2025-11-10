@@ -63,7 +63,7 @@
       ];
       language-server = {
         rust-analyzer = {
-          command = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+          command = "${pkgs.rust-analyzer-nightly}/bin/rust-analyzer";
           checkOnSave.command = "${pkgs.clippy}/bin/clippy";
           procMacro.enable = true;
         };
