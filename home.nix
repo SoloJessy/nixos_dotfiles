@@ -149,8 +149,11 @@
     enable = true;
     enableInteractive = true;
     settings = {
-      git_commit.only_detatched = false;
+      git_commit.only_detached = false;
       git_metrics.disabled = false;
+      git_metrics.only_nonzero_diffs = false;
+      git_metrics.format =
+        "[([+$added]($added_style) )][([-$deleted]($deleted_style) )]";
       format = lib.concatStrings [
         "$git_branch"
         "$git_commit"
