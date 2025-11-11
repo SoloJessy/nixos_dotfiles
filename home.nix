@@ -168,7 +168,6 @@
       sudo.disabled = false;
       sudo.style = "bold red";
       sudo.format = "\\[[sudo]($style)\\] ";
-      jobs.format = "\\[[$symbol$number]($style)\\] ";
       cmd_diration.format = "\\[[$duration]($style)\\] ";
       format = lib.concatStrings [
         "$time"
