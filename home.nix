@@ -161,7 +161,7 @@
         "\\[([+$added]($added_style))\\]\\[([-$deleted]($deleted_style))\\] ";
       git_state.format =
         "\\[[$state ($progress_current/$progress_total)]($style)\\] ";
-      git_status.format = "\\[[$all_status$ahead_behind]($style)\\] ";
+      git_status.format = "[\\[$all_status$ahead_behind\\]]($style) ";
       package.format = "\\[[$symbol$version]($style)\\] ";
       rust.format = "\\[[$symbol($version)]($style)\\] ";
       status.format = "\\[[$symbol$status]($style)\\] ";
