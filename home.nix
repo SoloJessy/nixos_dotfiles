@@ -163,6 +163,9 @@
         "$battery"
         "$line_break"
         "$status"
+        "$sudo"
+        "$jobs"
+        "$cmd_duration"
         "$character"
       ];
     };
