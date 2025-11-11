@@ -149,13 +149,30 @@
     enable = true;
     enableInteractive = true;
     settings = {
+      time.disabled = false;
+      time.format = "\\[[$time]($style)\\] ";
+      battery.format = "\\[[$symbol$percentage]($style)\\] ";
+      git_branch.format = "\\[[$symbol$branch]($style)\\] ";
       git_commit.only_detached = false;
+      git_commit.format = "\\[[\\($hash$tag\\)]($style)\\] ";
       git_metrics.disabled = false;
       git_metrics.only_nonzero_diffs = false;
       git_metrics.format =
-        "\\[([+$added]($added_style))\\]\\[([-$deleted]($deleted_style))\\]";
-      git_branch.format = "\\[[$symbol$branch]($style)\\] ";
+        "\\[([+$added]($added_style))\\]\\[([-$deleted]($deleted_style))\\] ";
+      git_state.format =
+        "\\[[$state ($progress_current/$progress_total)]($style)\\] ";
+      git_status.format = "\\[[$all_status$ahead_behind]($style)\\] ";
+      package.format = "\\[[$symbol$version]($style)\\] ";
+      rust.format = "\\[[$symbol($version)]($style)\\] ";
+      status.format = "\\[[$symbol$status]($style)\\] ";
+      sudo.disabled = false;
+      sudo.style = "bold red";
+      sudo.format = "\\[[sudo]($style)\\] ";
+      jobs.format = "\\[[$symbol$number]($style)\\] ";
+      cmd_diration.format = "\\[[$duration]($style)\\] ";
       format = lib.concatStrings [
+        "$time"
+        "$battery"
         "$git_branch"
         "$git_commit"
         "$git_state"
@@ -165,8 +182,6 @@
         "$rust"
         "$line_break"
         "$directory"
-        "$time"
-        "$battery"
         "$line_break"
         "$status"
         "$sudo"
