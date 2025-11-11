@@ -154,7 +154,7 @@
       battery.format = "\\[[$symbol$percentage]($style)\\] ";
       git_branch.format = "\\[[$symbol$branch]($style)\\] ";
       git_commit.only_detached = false;
-      git_commit.format = "\\[[\\($hash$tag\\)]($style)\\] ";
+      git_commit.format = "\\[[$hash$tag]($style)\\] ";
       git_metrics.disabled = false;
       git_metrics.only_nonzero_diffs = false;
       git_metrics.format =
