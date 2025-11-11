@@ -149,6 +149,8 @@
     enable = true;
     enableInteractive = true;
     settings = {
+      git_commit.only_detatched = false;
+      git_metrics.disabled = false;
       format = lib.concatStrings [
         "$git_branch"
         "$git_commit"
