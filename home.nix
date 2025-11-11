@@ -163,7 +163,7 @@
         "\\[[$state ($progress_current/$progress_total)]($style)\\] ";
       # git_status.format = "\\[[$all_status$ahead_behind]($style)\\] ";
       package.format = "\\[[$symbol$version]($style)\\] ";
-      rust.format = "\\[[$symbol($version)]($style)\\] ";
+      rust.format = "\\[[$symbol$version]($style)\\] ";
       status.format = "\\[[$symbol$status]($style)\\] ";
       sudo.disabled = false;
       sudo.style = "bold red";
