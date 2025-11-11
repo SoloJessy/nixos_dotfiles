@@ -154,7 +154,7 @@
       git_metrics.only_nonzero_diffs = false;
       git_metrics.format =
         "\\[([+$added]($added_style))\\]\\[([-$deleted]($deleted_style))\\]";
-      git_branch.format = "\\[[$symbol$branch]($style)\\]";
+      git_branch.format = "\\[[$symbol$branch]($style)\\] ";
       format = lib.concatStrings [
         "$git_branch"
         "$git_commit"
