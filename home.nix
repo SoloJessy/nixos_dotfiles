@@ -168,7 +168,7 @@
       sudo.disabled = false;
       sudo.style = "bold red";
       sudo.format = "\\[[sudo]($style)\\] ";
-      cmd_diration.format = "\\[[$duration]($style)\\] ";
+      cmd_duration.format = "\\[[$duration]($style)\\] ";
       format = lib.concatStrings [
         "$time"
         "$battery"
