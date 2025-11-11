@@ -158,7 +158,7 @@
       git_metrics.disabled = false;
       git_metrics.only_nonzero_diffs = false;
       git_metrics.format =
-        "\\[([+$added]($added_style))\\]\\[([-$deleted]($deleted_style))\\] ";
+        "\\[([+$added]($added_style))\\] \\[([-$deleted]($deleted_style))\\] ";
       git_state.format =
         "\\[[$state ($progress_current/$progress_total)]($style)\\] ";
       # git_status.format = "\\[[$all_status$ahead_behind]($style)\\] ";
