@@ -150,7 +150,6 @@
     enableInteractive = true;
     settings = {
       format = lib.concatStrings [
-        "$line_break"
         "$git_branch"
         "$git_commit"
         "$git_state"
