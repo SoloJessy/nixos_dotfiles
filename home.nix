@@ -2,7 +2,15 @@
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
-  home.packages = with pkgs; [ glow nnn fzf ripgrep btop hexyl delta ]; # broot
+  home.packages = with pkgs; [
+    inlyne
+    nnn
+    fzf
+    ripgrep
+    btop
+    hexyl
+    delta
+  ]; # broot
 
   programs.helix = {
     enable = true;
