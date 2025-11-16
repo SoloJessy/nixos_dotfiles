@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, fenix, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, fenix, ... }: {
     nixosConfigurations.nixos-old = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
