@@ -2,15 +2,7 @@
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
-  home.packages = with pkgs; [
-    logseq
-    nnn
-    fzf
-    ripgrep
-    btop
-    hexyl
-    delta
-  ]; # broot
+  home.packages = with pkgs; [ obsidian nnn fzf ripgrep btop hexyl delta ];
 
   programs.helix = {
     enable = true;
