@@ -1,8 +1,17 @@
-{ config, pkgs, lib, ... }: {
+let logseq-patch = pkgs.logseq.override { electron_27 = pkgs.electron_34; };
+in { config, pkgs, lib, ... }: {
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
-  home.packages = with pkgs; [ nnn fzf ripgrep btop hexyl delta ]; # broot
+  home.packages = with pkgs; [
+    logseq-patch
+    nnn
+    fzf
+    ripgrep
+    btop
+    hexyl
+    delta
+  ]; # broot
 
   programs.helix = {
     enable = true;
