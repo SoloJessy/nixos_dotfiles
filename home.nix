@@ -197,7 +197,5 @@
     shellAliases = { cat = "bat -s"; };
   };
 
-  programs.obsidian = { enable = true; };
-
   home.stateVersion = "25.05";
 }
