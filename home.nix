@@ -2,15 +2,7 @@
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
-  home.packages = with pkgs; [
-    inlyne
-    nnn
-    fzf
-    ripgrep
-    btop
-    hexyl
-    delta
-  ]; # broot
+  home.packages = with pkgs; [ nnn fzf ripgrep btop hexyl delta ]; # broot
 
   programs.helix = {
     enable = true;
@@ -204,6 +196,8 @@
     enableCompletion = true;
     shellAliases = { cat = "bat -s"; };
   };
+
+  programs.obsidian = { enable = true; };
 
   home.stateVersion = "25.05";
 }
