@@ -1,10 +1,9 @@
-let logseq-patch = pkgs.logseq.override { electron_27 = pkgs.electron_34; };
-in { config, pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }: {
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
   home.packages = with pkgs; [
-    logseq-patch
+    logseq
     nnn
     fzf
     ripgrep
