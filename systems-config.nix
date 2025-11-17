@@ -1,10 +1,9 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.tmp.cleanOnBoot = true;
-  
+
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -22,8 +21,8 @@
 
   fonts.enableDefaultPackages = true;
   fonts.enableGhostscriptFonts = true;
-  
-  fonts.packages= with pkgs; [
+
+  fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
   ];
