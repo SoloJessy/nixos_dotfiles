@@ -15,6 +15,7 @@
     # Dev programs
     helix
     git
+    openrazer-daemon
 
     #General System Wide Programs
     firefox

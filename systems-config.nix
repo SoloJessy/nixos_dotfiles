@@ -32,7 +32,7 @@
   fonts.fontconfig.useEmbeddedBitmaps = true;
 
   hardware.bluetooth.enable = true;
-  hardware.openrrazer.enable = true;
+  hardware.openrazer.enable = true;
 
   # Select internationalisation properties.
   # i18n = {
