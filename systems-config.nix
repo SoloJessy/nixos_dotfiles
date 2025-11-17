@@ -32,7 +32,8 @@
   fonts.fontconfig.useEmbeddedBitmaps = true;
 
   hardware.bluetooth.enable = true;
-  
+  hardware.openrrazer.enable = true;
+
   # Select internationalisation properties.
   # i18n = {
   #   consleFont = ""
@@ -84,7 +85,7 @@
   users.users.jessy = {
     isNormalUser = true;
     description = "Sam Bartley";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "openrazer" ];
   };
 
   # Enable automatic login for the user.
