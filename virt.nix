@@ -5,7 +5,7 @@
       swtpm.enable = true;
       ovmf.packages = [ pkgs.OVMFFull.fd ];
     };
-    virtualization.spiceUSBRedirection.enable = true;
+    spiceUSBRedirection.enable = true;
   };
 
   users.groups.libvirtd.members = [ "jessy" ];
