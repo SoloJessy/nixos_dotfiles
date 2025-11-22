@@ -96,6 +96,26 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = [ "*" ];
+        settings = {
+          main = {
+
+          };
+        };
+      };
+    };
+  };
+  environment.etc."libinput/local-overrides.quirks".text = ''
+    [Serial Keyboards]
+    MatchUdevType=keyboard
+    MatchName=keyd virtual keyboard
+    AttrKeyboardIntergration=internal
+  '';
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 }
