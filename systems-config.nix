@@ -103,12 +103,12 @@
         ids = [ "*" ];
         settings = {
           main = {
-            shift = "oneshot(shift)";
-            meta = "oneshot(meta)";
-            control = "oneshot(control)";
+            # shift = "oneshot(shift)";
+            # meta = "oneshot(meta)";
+            # control = "oneshot(control)";
 
-            leftalt = "oneshot(alt)";
-            rightalt = "oneshot(altgr)";
+            # leftalt = "oneshot(alt)";
+            # rightalt = "oneshot(altgr)";
           };
         };
       };
