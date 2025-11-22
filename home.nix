@@ -204,6 +204,11 @@
     enable = true;
     enableCompletion = true;
     shellAliases = { cat = "bat -s"; };
+    bashrcExtra = [
+      "razer-cli --dpi 300"
+      "razer-cli --poll 1000"
+      "razer-cli --battery 10"
+    ];
   };
 
   home.stateVersion = "25.05";

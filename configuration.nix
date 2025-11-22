@@ -13,6 +13,7 @@
     helix
     git
     openrazer-daemon
+    razer-cli
 
     #General System Wide Programs
     firefox

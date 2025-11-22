@@ -104,6 +104,8 @@
         settings = {
           main = { capslock = "esc"; };
           shift = { capslock = "capslock"; };
+          # mouse1 (rear side button)
+          # mouse2 (front side button)
         };
       };
     };
