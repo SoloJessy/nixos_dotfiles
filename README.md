@@ -17,4 +17,15 @@ sets up:
 ## flake.lock
 the file that you should never touch, but that declares everything
 
-## 
+## home.nix
+
+This file contains my home-manager configuration.
+It configures most everything that needs it.
+
+## steam.nix
+
+This file sets-up and configures steam and its supporting programs for me.
+
+## systems-config.nix
+
+This file contains all the basic configuration to get my system working.
