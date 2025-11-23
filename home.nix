@@ -11,6 +11,7 @@
     btop
     hexyl
     delta
+    mgba
   ];
 
   programs.helix = {
