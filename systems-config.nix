@@ -85,7 +85,7 @@
   users.users.jessy = {
     isNormalUser = true;
     description = "Sam Bartley";
-    extraGroups = [ "networkmanager" "wheel" "openrazer" ];
+    extraGroups = [ "networkmanager" "wheel" "openrazer" "plugdev" ];
   };
 
   # Enable automatic login for the user.
