@@ -1,5 +1,4 @@
-{ config, pkgs, inputs, ... }:
-{
+{ config, pkgs, inputs, ... }: {
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
 
@@ -15,5 +14,6 @@
     lutris
     bottles
     heroic
+    wineWowPackages.stable
   ];
 }
