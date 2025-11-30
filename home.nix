@@ -5,7 +5,13 @@
   home.packages = with pkgs; [
     polychromatic
     obsidian
-    nnn
+    yazi
+    bacon
+    cargo-info
+    ncspot
+    rusty-man
+    wiki-tui
+    just
     fzf
     ripgrep
     btop
