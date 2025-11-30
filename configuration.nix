@@ -3,7 +3,7 @@
     ./hardware-configuration.nix
     ./systems-config.nix
     ./steam.nix
-    ./virt.nix
+    # ./virt.nix
   ];
 
   # List packages installed in system profile. To search, run:
