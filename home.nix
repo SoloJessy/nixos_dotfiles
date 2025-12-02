@@ -20,6 +20,11 @@
     mgba
   ];
 
+  programs.nyxt = {
+    enable = true;
+    # config = '''';
+  };
+
   programs.helix = {
     enable = true;
     defaultEditor = true;
