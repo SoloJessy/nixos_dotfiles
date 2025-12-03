@@ -32,7 +32,7 @@
     enable = true;
     defaultSettings = {
       themes = [
-        "Flexoki"
+        # "Flexoki"
       ];
       communityPlugins = [
         # "obsidian-git"
