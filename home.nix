@@ -10,8 +10,6 @@
 
   home.packages = with pkgs; [
     polychromatic
-    obsidian
-    yazi
     bacon
     cargo-info
     ncspot
@@ -22,13 +20,37 @@
     ripgrep
     btop
     hexyl
-    delta
     mgba
   ];
 
   programs.nyxt = {
     enable = true;
     # config = '''';
+  };
+
+  programs.obsidian = {
+    enable = true;
+    defaultSettings = {
+      themethemes = [
+        "Flexoki"
+      ];
+      communityPlugins = [
+        "Git"
+        "Kanban"
+        "Editing Toolbar"
+      ];
+    };
+    vaults = {
+      programming = {
+        enable = true;
+        target = "~/Documents/Vaults/";
+      };
+    };
+  };
+
+  programs.yazi = {
+    enable = true;
+    enableBashIntegration = true;
   };
 
   programs.helix = {
