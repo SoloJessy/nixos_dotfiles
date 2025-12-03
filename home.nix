@@ -1,4 +1,10 @@
-{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
@@ -71,13 +77,21 @@
         {
           name = "markdown";
           file-types = [ "md" ];
-          language-servers = [ "marksman" "ltex-ls-plus" ];
+          language-servers = [
+            "marksman"
+            "ltex-ls-plus"
+          ];
           soft-wrap.enable = true;
           soft-wrap.wrap-indicator = "";
           soft-wrap.wrap-at-text-width = true;
           formatter = {
             command = "${pkgs.nodePackages.prettier}/bin/prettier";
-            args = [ "--parser" "markdown" "--prose-wrap" "never" ];
+            args = [
+              "--parser"
+              "markdown"
+              "--prose-wrap"
+              "never"
+            ];
             auto-format = true;
           };
         }
@@ -88,7 +102,7 @@
           checkOnSave.command = "${pkgs.clippy}/bin/clippy";
           procMacro.enable = true;
         };
-        marksman = { command = "${pkgs.marksman}/bin/marksman"; };
+        marksman.command = "${pkgs.marksman}/bin/marksman";
         ltex-ls-plus = {
           command = "${pkgs.ltex-ls-plus}/bin/ltex-ls-plus";
           ltex.diagnosticSeverity = "warning";
@@ -132,7 +146,7 @@
 
   programs.bat = {
     enable = true;
-    config = { theme = "onehalfdark"; };
+    config.theme = "onehalfdark";
   };
 
   programs.zoxide = {
@@ -178,10 +192,8 @@
       git_commit.format = "\\[[$hash$tag]($style)\\] ";
       git_metrics.disabled = false;
       git_metrics.only_nonzero_diffs = false;
-      git_metrics.format =
-        "\\[([+$added]($added_style))\\] \\[([-$deleted]($deleted_style))\\] ";
-      git_state.format =
-        "\\[[$state ($progress_current/$progress_total)]($style)\\] ";
+      git_metrics.format = "\\[([+$added]($added_style))\\] \\[([-$deleted]($deleted_style))\\] ";
+      git_state.format = "\\[[$state ($progress_current/$progress_total)]($style)\\] ";
       # git_status.format = "\\[[$all_status$ahead_behind]($style)\\] ";
       package.format = "\\[[$symbol$version]($style)\\] ";
       rust.format = "\\[[$symbol$version]($style)\\] ";
@@ -215,7 +227,9 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAliases = { cat = "bat -s"; };
+    shellAliases = {
+      cat = "bat -s";
+    };
     bashrcExtra = lib.concatLines [
       "razer-cli --dpi 300"
       "razer-cli --poll 1000"

@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -85,7 +86,12 @@
   users.users.jessy = {
     isNormalUser = true;
     description = "Sam Bartley";
-    extraGroups = [ "networkmanager" "wheel" "openrazer" "plugdev" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "openrazer"
+      "plugdev"
+    ];
   };
 
   # Enable automatic login for the user.
@@ -94,7 +100,10 @@
 
   system.stateVersion = "25.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   services.keyd = {
     enable = true;
@@ -102,8 +111,12 @@
       default = {
         ids = [ "*" ];
         settings = {
-          main = { capslock = "esc"; };
-          shift = { capslock = "capslock"; };
+          main = {
+            capslock = "esc";
+          };
+          shift = {
+            capslock = "capslock";
+          };
           # mouse1 (rear side button)
           # mouse2 (front side button)
         };

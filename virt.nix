@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   virtualisation.libvirtd = {
     enable = true;
     qemu = {
@@ -11,5 +12,8 @@
   users.groups.libvirtd.members = [ "jessy" ];
   users.groups.kvm.members = [ "jessy" ];
 
-  environment.systemPackages = with pkgs; [ gnome-boxes dnsmasq ];
+  environment.systemPackages = with pkgs; [
+    gnome-boxes
+    dnsmasq
+  ];
 }

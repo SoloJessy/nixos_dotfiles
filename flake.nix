@@ -11,32 +11,42 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, fenix, ... }: {
-    nixosConfigurations.nixos-old = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.jessy = import ./home.nix;
-        }
-        ({ pkgs, ... }: {
-          nixpkgs.overlays = [ fenix.overlays.default ];
-          environment.systemPackages = [
-            (pkgs.fenix.complete.withComponents [
-              "cargo"
-              "clippy"
-              "rust-src"
-              "rustc"
-              "rustfmt"
-            ])
-            pkgs.rust-analyzer-nightly
-            pkgs.gcc
-          ];
-        })
-      ];
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      fenix,
+      ...
+    }:
+    {
+      nixosConfigurations.nixos-old = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jessy = import ./home.nix;
+          }
+          (
+            { pkgs, ... }:
+            {
+              nixpkgs.overlays = [ fenix.overlays.default ];
+              environment.systemPackages = [
+                (pkgs.fenix.complete.withComponents [
+                  "cargo"
+                  "clippy"
+                  "rust-src"
+                  "rustc"
+                  "rustfmt"
+                ])
+                pkgs.rust-analyzer-nightly
+                pkgs.gcc
+              ];
+            }
+          )
+        ];
+      };
     };
-  };
 }

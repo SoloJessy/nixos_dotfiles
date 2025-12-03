@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, ... }: {
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+{
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
 
@@ -9,14 +15,13 @@
   programs.gamemode.enable = true;
   # programs.xwayland.enable = true;
 
-  environment.systemPackages = with pkgs;
-    [
-      # mangohud
-      protonup-qt
-      # lutris
-      # bottles
-      # heroic
-      # wineWowPackages.full
-      # winetricks
-    ];
+  environment.systemPackages = with pkgs; [
+    # mangohud
+    protonup-qt
+    # lutris
+    # bottles
+    # heroic
+    # wineWowPackages.full
+    # winetricks
+  ];
 }
