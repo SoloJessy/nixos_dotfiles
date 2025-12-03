@@ -35,9 +35,9 @@
         "Flexoki"
       ];
       communityPlugins = [
-        "Git"
-        "Kanban"
-        "Editing Toolbar"
+        "obsidian-git"
+        "obsidian-kanban"
+        "obsidian-editing-toolbar"
       ];
     };
     vaults = {
