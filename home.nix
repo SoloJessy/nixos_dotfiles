@@ -155,30 +155,39 @@
     options = [ "--cmd cd" ];
   };
 
-  # programs.delta = {
-  #   enable = true;
-  #   enableGitIntegration = true;
-  #   options = {
-  #     side-by-side = true;
-  #     line-numbers = true;
-  #   };
-  # };
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options = {
+      side-by-side = true;
+      line-numbers = true;
+    };
+  };
 
   programs.git = {
     enable = true;
-    userName = "Sam Bartley";
-    userEmail = "SoloJessy.rs@gmail.com";
-    delta.enable = true;
-    extraConfig = {
-      core = { pager = "${pkgs.delta}/bin/delta"; };
-      interactive = { diffFilter = "${pkgs.delta}/bin/delta --color-only"; };
-      delta = {
-        navigate = true;
-        dark = true;
-      };
-      merge = { conflictStyle = "zdiff3"; };
+    settings = {
+      user.name = "Sam Bartley";
+      user.email = "SoloJessy.rs@gmail.com";
+      merge.conflictStyle = "zdiff3";
     };
   };
+
+  # programs.git = {
+  #   enable = true;
+  #   userName = "Sam Bartley";
+  #   userEmail = "SoloJessy.rs@gmail.com";
+  #   delta.enable = true;
+  #   extraConfig = {
+  #     core = { pager = "${pkgs.delta}/bin/delta"; };
+  #     interactive = { diffFilter = "${pkgs.delta}/bin/delta --color-only"; };
+  #     delta = {
+  #       navigate = true;
+  #       dark = true;
+  #     };
+  #     merge = { conflictStyle = "zdiff3"; };
+  #   };
+  # };
 
   programs.starship = {
     enable = true;
