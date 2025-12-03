@@ -14,7 +14,8 @@
     cargo-info
     ncspot
     rusty-man
-    wiki-tui
+    wikiman
+    tldr
     just
     fzf
     ripgrep
