@@ -31,7 +31,7 @@
   programs.obsidian = {
     enable = true;
     defaultSettings = {
-      themethemes = [
+      theme = [
         "Flexoki"
       ];
       communityPlugins = [
