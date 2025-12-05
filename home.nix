@@ -29,6 +29,11 @@
     # config = '''';
   };
 
+  programs.thunderbird = {
+    enable = true;
+
+  };
+
   programs.obsidian = {
     enable = true;
     defaultSettings = {
