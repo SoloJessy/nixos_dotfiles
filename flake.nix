@@ -40,6 +40,7 @@
                   "rust-src"
                   "rustc"
                   "rustfmt"
+                  "rust-doc"
                 ])
                 pkgs.rust-analyzer-nightly
                 pkgs.gcc

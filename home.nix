@@ -261,6 +261,7 @@
     enableCompletion = true;
     shellAliases = {
       cat = "bat -s";
+      # rustdoc = "firefox result/share/doc/rust/html/index.html";
     };
     bashrcExtra = lib.concatLines [
       "razer-cli --dpi 300"
