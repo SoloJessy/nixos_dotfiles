@@ -16,6 +16,8 @@
     git
     openrazer-daemon
     razer-cli
+    man-pages
+    man-pages-posix
 
     #General System Wide Programs
     firefox
