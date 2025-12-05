@@ -22,16 +22,12 @@
     btop
     hexyl
     mgba
+    thunderbird
   ];
 
   programs.nyxt = {
     enable = true;
     # config = '''';
-  };
-
-  programs.thunderbird = {
-    enable = true;
-
   };
 
   programs.obsidian = {
