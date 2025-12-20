@@ -5,6 +5,10 @@
   ...
 }:
 {
+  imports = [
+    ./firefox.nix
+  ];
+
   home.username = "jessy";
   home.homeDirectory = "/home/jessy";
 
