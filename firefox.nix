@@ -30,7 +30,7 @@ in
         DisplayMenuBar = "default-off";
         SearchBar = "unified";
       };
-      Preferences = {
+      preferences = {
         "browser.tabs.closeWindowWithLastTab" = lock-false;
         "browser.aboutConfig.showWarning" = lock-false;
         "browser.topsites.contile.enabled" = lock-false;
