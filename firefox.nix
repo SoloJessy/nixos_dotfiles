@@ -11,7 +11,7 @@ let
 in
 {
   programs.firefox = {
-    enabled = true;
+    enable = true;
     package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
       extraPolicies = {
         DisableTelemetry = true;
