@@ -45,7 +45,7 @@ in
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
         };
         ExtensionSettings = {
-          "*".installation_mode = "blocked";
+          # "*".installation_mode = "blocked";
           # Ublock Origin
           "uBlock0@raymondhill.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
