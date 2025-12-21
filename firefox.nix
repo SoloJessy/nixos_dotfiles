@@ -29,8 +29,24 @@ in
         DisplayBookmarksToolbar = "newtab";
         DisplayMenuBar = "default-off";
         SearchBar = "unified";
+        DisablePocket = true;
+        OfferToSaveLogins = false;
+        ShowHomeButton = true;
+        SkipTermsOfUse = true;
+        SearchEngines = {
+          "default" = "DuckDuckGo";
+          "PreventInstalls" = true;
+          "Remove" = [
+            "Google"
+            "Bing"
+            "eBay"
+            "Perplexity"
+            "Wikipedia (en)"
+          ];
+        };
         Preferences = {
           "browser.tabs.closeWindowWithLastTab" = lock-false;
+          "sidebar.verticalTabs" = lock-true;
           "browser.aboutConfig.showWarning" = lock-false;
           "browser.topsites.contile.enabled" = lock-false;
           "browser.formfill.enable" = lock-false;
@@ -45,7 +61,6 @@ in
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
         };
         ExtensionSettings = {
-          # "*".installation_mode = "blocked";
           # Ublock Origin
           "uBlock0@raymondhill.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
