@@ -8,8 +8,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos-old";
-  # networking.hostname = "nixos";
+  networking.hostname = "nixos";
 
   # Enable networking
   networking.networkmanager.enable = true;
