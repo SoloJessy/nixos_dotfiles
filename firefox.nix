@@ -29,7 +29,7 @@ in
         DisplayBookmarksToolbar = "newtab";
         DisplayMenuBar = "default-off";
         SearchBar = "unified";
-        preferences = {
+        Preferences = {
           "browser.tabs.closeWindowWithLastTab" = lock-false;
           "browser.aboutConfig.showWarning" = lock-false;
           "browser.topsites.contile.enabled" = lock-false;
