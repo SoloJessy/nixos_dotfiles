@@ -58,7 +58,7 @@
   # console.keyMap = "uk";
   console.keyMap = "uk";
   services.xserver = {
-    xkb.layout = "en_GB";
+    xkb.layout = "gb";
   };
 
   # Enable CUPS to print documents.
