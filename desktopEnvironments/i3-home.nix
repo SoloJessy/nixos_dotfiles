@@ -75,7 +75,7 @@
           indicator = "#900000";
           childBorder = "#900000";
         };
-        placaeholder = {
+        placeholder = {
           border = "#000000";
           background = "#0c0c0c";
           text = "#ffffff";
