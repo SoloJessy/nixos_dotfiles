@@ -7,6 +7,7 @@
 {
   imports = [
     ./firefox.nix
+    ./desktopEnvironments/i3-home.nix
   ];
 
   home.username = "jessy";

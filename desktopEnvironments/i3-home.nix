@@ -1,0 +1,84 @@
+{ pkgs, ... }:
+{
+  xsession.windowManager.i3 = {
+    enable = true;
+    config = {
+      modifier = "mod4";
+      terminal = "alacritty";
+      menu = "${pkgs.dmenu}/bin/dmenu_run -nf \"#bbbbbb\" -nb \"#222222\" -sb \"#613583\" -sf \"#eeeeee\" -fn \"monospace:size=10\" -p \"dmenu\"";
+      focus = {
+        followMouse = true;
+        mouseWarping = true;
+        newWindow = true;
+      };
+      bars."*".colors = {
+        background = "#241f31";
+        statusLine = "#ffffff";
+        seperator = "#666666";
+        focused_workspace = {
+          border = "#813d9c";
+          background = "#613583";
+          text = "#ffffff";
+        };
+        active_workspace = {
+          border = "#333333";
+          background = "#222222";
+          text = "#ffffff";
+        };
+        inactive_workspace = {
+          border = "#333333";
+          background = "#222222";
+          text = "#888888";
+        };
+        urgent_workspace = {
+          border = "#2f343a";
+          background = "#900000";
+          text = "#ffffff";
+        };
+        binding_mode = {
+          border = "#2f343a";
+          background = "#900000";
+          text = "#ffffff";
+        };
+      };
+      colors = {
+        focused = {
+          border = "#813d9c";
+          background = "#613583";
+          text = "#ffffff";
+          indicator = "#813d9c";
+          childBorder = "#613583";
+        };
+        focused_inactive = {
+          border = "#333333";
+          background = "#c5f676a";
+          text = "#ffffff";
+          indicator = "#484e50";
+          childBorder = "#5f676a";
+        };
+        unfocused = {
+          border = "#333333";
+          background = "#222222";
+          text = "#888888";
+          indicator = "#292d2e";
+          childBorder = "#222222";
+        };
+        urgent = {
+          border = "#2f343a";
+          background = "#900000";
+          text = "#ffffff";
+          indicator = "#900000";
+          childBorder = "#900000";
+        };
+        placaeholder = {
+          border = "#000000";
+          background = "#0c0c0c";
+          text = "#ffffff";
+          indicator = "#000000";
+          childBorder = "#0c0c0c";
+        };
+        background = "#ffffff";
+      };
+    };
+  };
+}

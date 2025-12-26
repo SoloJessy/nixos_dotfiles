@@ -4,8 +4,8 @@
     ./hardware-configuration.nix
     ./systems-config.nix
     ./steam.nix
-    # ./desktopEnvironments/cosmic.nix
-    ./desktopEnvironments/i3.nix
+    # ./desktopEnvironments/cosmic-base.nix
+    ./desktopEnvironments/i3-base.nix
     # ./virt.nix
   ];
 
