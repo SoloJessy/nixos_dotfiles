@@ -11,8 +11,8 @@
         mouseWarping = true;
         newWindow = true;
       };
-      bars = [
-        {
+      bars = {
+        i3bar = {
           background = "#241f31";
           statusLine = "#ffffff";
           seperator = "#666666";
@@ -41,8 +41,8 @@
             background = "#900000";
             text = "#ffffff";
           };
-        }
-      ];
+        };
+      };
       colors = {
         focused = {
           border = "#813d9c";
