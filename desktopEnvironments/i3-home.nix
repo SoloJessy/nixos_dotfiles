@@ -13,33 +13,35 @@
       };
       bars = {
         i3bar = {
-          background = "#241f31";
-          statusLine = "#ffffff";
-          seperator = "#666666";
-          focused_workspace = {
-            border = "#813d9c";
-            background = "#613583";
-            text = "#ffffff";
-          };
-          active_workspace = {
-            border = "#333333";
-            background = "#222222";
-            text = "#ffffff";
-          };
-          inactive_workspace = {
-            border = "#333333";
-            background = "#222222";
-            text = "#888888";
-          };
-          urgent_workspace = {
-            border = "#2f343a";
-            background = "#900000";
-            text = "#ffffff";
-          };
-          binding_mode = {
-            border = "#2f343a";
-            background = "#900000";
-            text = "#ffffff";
+          color = {
+            background = "#241f31";
+            statusLine = "#ffffff";
+            seperator = "#666666";
+            focused_workspace = {
+              border = "#813d9c";
+              background = "#613583";
+              text = "#ffffff";
+            };
+            active_workspace = {
+              border = "#333333";
+              background = "#222222";
+              text = "#ffffff";
+            };
+            inactive_workspace = {
+              border = "#333333";
+              background = "#222222";
+              text = "#888888";
+            };
+            urgent_workspace = {
+              border = "#2f343a";
+              background = "#900000";
+              text = "#ffffff";
+            };
+            binding_mode = {
+              border = "#2f343a";
+              background = "#900000";
+              text = "#ffffff";
+            };
           };
         };
       };
