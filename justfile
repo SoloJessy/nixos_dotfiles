@@ -1,3 +1,5 @@
+alias r := rebuild
+
 rebuild:
     sudo nixos-rebuild switch --flake .
 
