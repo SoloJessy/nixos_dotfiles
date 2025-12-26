@@ -9,7 +9,6 @@
       focus = {
         followMouse = true;
         mouseWarping = true;
-        newWindow = true;
       };
       bars = [
         {
