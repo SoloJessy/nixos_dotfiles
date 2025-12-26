@@ -13,7 +13,9 @@
       };
       bars = [
         {
-          color = {
+          mode = "dock";
+          position = "top";
+          colors = {
             background = "#241f31";
             statusLine = "#ffffff";
             seperator = "#666666";
