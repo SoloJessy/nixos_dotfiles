@@ -1,10 +1,11 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
     ./systems-config.nix
     ./steam.nix
-    ./desktopEnvironments/cosmic.nix
+    # ./desktopEnvironments/cosmic.nix
+    ./desktopEnvironments/i3.nix
     # ./virt.nix
   ];
 
