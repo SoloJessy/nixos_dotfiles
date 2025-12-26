@@ -89,26 +89,40 @@
   };
   programs.i3status-rust = {
     enable = true;
+    bars.top.settings = {
+      theme = {
+        theme = "plain";
+        overrides = {
+          idle_bg = "#241f31";
+          info_bg = "#241f31";
+          good_bg = "#241f31";
+          warning_bg = "#241f31";
+          critical_bg = "#241f31";
+          separator_bg = "#241f31";
+        };
+      };
+    };
     bars.top.blocks = [
-      { block = "cpu"; }
-      {
-        block = "memory";
-        format = "$icon $mem_total_used_percents.eng(w:2) ";
-        format_alt = " $icon_swap $swap_used_percents.eng(w:2)";
-      }
-      {
-        block = "sound";
-        click = [
-          {
-            button = "left";
-            cmd = "pavucontrol";
-          }
-        ];
-      }
       {
         block = "time";
-        format = " $timestamp.datetime(f:'%a %d/%m %R') ";
-        interval = 5;
+      }
+      {
+        block = "cpu";
+      }
+      {
+        block = "temperature";
+      }
+      {
+        block = "memory";
+      }
+      {
+        block = "net";
+      }
+      {
+        block = "battery";
+        format = " $icon $percentage $time_remaining ";
+        full_format = " $icon $percentage ";
+        charging_format = " $icon $percentage ";
       }
     ];
   };
