@@ -55,7 +55,11 @@
   # Enable the MATE Desktop Environment.
 
   # Configure console keymap
+  # console.keyMap = "uk";
   console.keyMap = "uk";
+  services.xserver = {
+    xkb.layout = "uk";
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
