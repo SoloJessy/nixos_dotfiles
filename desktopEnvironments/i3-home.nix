@@ -16,7 +16,7 @@
           position = "top";
           colors = {
             background = "#241f31";
-            statusLine = "#ffffff";
+            statusline = "#ffffff";
             separator = "#666666";
             focusedWorkspace = {
               border = "#813d9c";
