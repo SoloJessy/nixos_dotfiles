@@ -12,6 +12,7 @@
       };
       bars = [
         {
+          statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-top.toml";
           mode = "dock";
           position = "top";
           colors = {
@@ -85,5 +86,30 @@
         background = "#ffffff";
       };
     };
+  };
+  programs.i3status-rust = {
+    enable = true;
+    bars.top.blocks = [
+      { block = "cpu"; }
+      {
+        block = "memory";
+        format = "$icon $mem_total_used_percents.eng(w:2) ";
+        format_alt = " $icon_swap $swap_used_percents.eng(w:2)";
+      }
+      {
+        block = "sound";
+        click = [
+          {
+            button = "left";
+            cmd = "pavucontrol";
+          }
+        ];
+      }
+      {
+        block = "time";
+        format = " $timestamp.datetime(f:'%a %d/%m %R') ";
+        interval = 5;
+      }
+    ];
   };
 }
