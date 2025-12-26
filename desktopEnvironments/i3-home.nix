@@ -11,7 +11,7 @@
         mouseWarping = true;
         newWindow = true;
       };
-      bars.colors = {
+      bars.i3bar.colors = {
         background = "#241f31";
         statusLine = "#ffffff";
         seperator = "#666666";
