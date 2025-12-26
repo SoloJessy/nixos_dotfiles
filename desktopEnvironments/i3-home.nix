@@ -18,27 +18,27 @@
             background = "#241f31";
             statusLine = "#ffffff";
             seperator = "#666666";
-            focused_workspace = {
+            focusedWorkspace = {
               border = "#813d9c";
               background = "#613583";
               text = "#ffffff";
             };
-            active_workspace = {
+            activeWorkspace = {
               border = "#333333";
               background = "#222222";
               text = "#ffffff";
             };
-            inactive_workspace = {
+            inactiveWorkspace = {
               border = "#333333";
               background = "#222222";
               text = "#888888";
             };
-            urgent_workspace = {
+            urgentWorkspace = {
               border = "#2f343a";
               background = "#900000";
               text = "#ffffff";
             };
-            binding_mode = {
+            bindingMode = {
               border = "#2f343a";
               background = "#900000";
               text = "#ffffff";
@@ -54,7 +54,7 @@
           indicator = "#813d9c";
           childBorder = "#613583";
         };
-        focused_inactive = {
+        focusedInactive = {
           border = "#333333";
           background = "#c5f676a";
           text = "#ffffff";
