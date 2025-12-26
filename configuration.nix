@@ -10,6 +10,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    alacritty
     helix
     git
     openrazer-daemon
