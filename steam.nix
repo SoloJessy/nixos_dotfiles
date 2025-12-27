@@ -16,7 +16,7 @@
   # programs.xwayland.enable = true;
 
   environment.systemPackages = with pkgs; [
-    # mangohud
+    mangohud
     protonup-qt
     # lutris
     # bottles
