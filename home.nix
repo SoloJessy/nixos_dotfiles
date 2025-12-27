@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   lib,
   ...
@@ -291,6 +290,23 @@
       "razer-cli --poll 1000"
       # "razer-cli --battery 10"
     ];
+  };
+
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      mouse = {
+        hide_when_typing = true;
+      };
+      font = {
+        normal = {
+          # family = "droid sans mono";
+          family = "DroidSansM Nerd Font";
+          style = "Regular";
+        };
+        size = 8;
+      };
+    };
   };
 
   home.stateVersion = "25.05";
