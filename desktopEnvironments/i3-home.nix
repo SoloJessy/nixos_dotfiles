@@ -11,12 +11,24 @@
         followMouse = false;
         mouseWarping = true;
       };
-      startup = [
-        {
-          always = true;
-          command = "i3a-master-stack --stack=i3";
-        }
-      ];
+      startup =
+        let
+          wallpaper = "~/Pictures/cosmic/A_stormy_stellar_nursery_esa_379309.jpg";
+        in
+        [
+          {
+            always = true;
+            command = "i3a-master-stack --stack=i3";
+          }
+          {
+            always = true;
+            command = "bluemon-tray";
+          }
+          {
+            always = true;
+            command = "feh --bg-scale ${wallpaper}";
+          }
+        ];
       assigns = {
         "9: games" = [ { class = "(?i)steam"; } ];
       };
@@ -188,4 +200,12 @@
       ];
     };
   };
+  home.file = {
+    cosmic-wallpapers = {
+      source = "${pkgs.cosmic-wallpapers}/share/backgrounds/cosmic/";
+      target = "Pictures/cosmic/";
+      recursive = false;
+    };
+  };
+
 }

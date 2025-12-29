@@ -11,6 +11,8 @@
         i3status
         i3lock
         i3a
+        feh
+        cosmic-wallpapers
       ];
     };
   };
@@ -28,5 +30,4 @@
     };
   };
   services.blueman.enable = true;
-
 }
