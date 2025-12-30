@@ -8,7 +8,7 @@
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
 
-  # services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;

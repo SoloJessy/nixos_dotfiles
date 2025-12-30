@@ -5,7 +5,7 @@
     config = {
       modifier = "mod4";
       terminal = "alacritty";
-      menu = "${pkgs.dmenu}/bin/dmenu_run -nf \"#bbbbbb\" -nb \"#222222\" -sb \"#613583\" -sf \"#eeeeee\" -fn \"monospace:size=10\" -p \"dmenu\"";
+      menu = "${pkgs.dmenu}/bin/dmenu_run -nf \"#bbbbbb\" -nb \"#222222\" -sb \"#613583\" -sf \"#eeeeee\" -fn \"monospace:size=18\" -p \"dmenu\"";
       defaultWorkspace = "1";
       focus = {
         followMouse = false;
@@ -30,6 +30,7 @@
           }
         ];
       assigns = {
+        "2: chat" = [ { class = "(?i)vesktop"; } ];
         "9: games" = [ { class = "(?i)steam"; } ];
       };
 
@@ -83,7 +84,7 @@
           fonts = {
             names = [ "DroidSansM Nerd Font" ];
             style = "Normal Semi-Condensed";
-            size = 8.0;
+            size = 18.0;
           };
           colors = {
             background = "#241f31";

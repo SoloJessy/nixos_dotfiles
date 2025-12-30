@@ -33,11 +33,8 @@
 
   hardware.bluetooth.enable = true;
   hardware.openrazer.enable = true;
+  services.fprintd.enable = true;
 
-  # Select internationalisation properties.
-  # i18n = {
-  #   consleFont = ""
-  # }
   i18n.defaultLocale = "en_GB.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -66,6 +63,7 @@
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
+  services.pulseaudio.support32Bit = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -79,6 +77,7 @@
     isNormalUser = true;
     description = "Sam Bartley";
     extraGroups = [
+      "audio"
       "networkmanager"
       "wheel"
       "openrazer"

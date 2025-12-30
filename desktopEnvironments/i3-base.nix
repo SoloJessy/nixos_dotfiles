@@ -13,6 +13,10 @@
         i3a
         feh
         cosmic-wallpapers
+        pavucontrol
+        pamixer
+        bluez
+        bluez-tools
       ];
     };
   };

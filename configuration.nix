@@ -5,12 +5,15 @@
     ./systems-config.nix
     ./steam.nix
     # ./desktopEnvironments/cosmic-base.nix
-    ./desktopEnvironments/i3-base.nix
+    ./desktopEnvironments/gnome.nix
+    # ./desktopEnvironments/i3-base.nix
     # ./virt.nix
   ];
 
   environment.systemPackages = with pkgs; [
+    bitwarden-desktop
     alacritty
+    xorg.xinput
     helix
     git
     openrazer-daemon
