@@ -6,4 +6,6 @@
   environment.cosmic.excludePackages = with pkgs; [
     cosmic-edit
   ];
+
+  services.blueman.enable = true;
 }

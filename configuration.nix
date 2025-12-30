@@ -4,13 +4,15 @@
     ./hardware-configuration.nix
     ./systems-config.nix
     ./steam.nix
-    # ./desktopEnvironments/cosmic-base.nix
-    ./desktopEnvironments/gnome.nix
+    ./desktopEnvironments/cosmic-base.nix
+    # ./desktopEnvironments/gnome.nix
     # ./desktopEnvironments/i3-base.nix
     # ./virt.nix
   ];
 
   environment.systemPackages = with pkgs; [
+    framework-tool
+    framework-tool-tui
     bitwarden-desktop
     alacritty
     xorg.xinput

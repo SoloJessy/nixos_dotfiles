@@ -9,6 +9,7 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =
@@ -16,6 +17,7 @@
       nixpkgs,
       home-manager,
       fenix,
+      nixos-hardware,
       ...
     }:
     {
@@ -23,6 +25,7 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
+          nixos-hardware.nixosModules.framework-16-amd-ai-300-series
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

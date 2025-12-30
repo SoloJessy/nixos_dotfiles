@@ -31,9 +31,30 @@
   fonts.fontDir.enable = true;
   fonts.fontconfig.useEmbeddedBitmaps = true;
 
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+        FastConnectable = true;
+      };
+      Policy = {
+        AutoEnable = true;
+      };
+    };
+  };
   hardware.openrazer.enable = true;
   services.fprintd.enable = true;
+
+  services.libinput = {
+    enable = true;
+    touchpad = {
+      sendEventsMode = "disabled-on-external-mouse";
+      tappingButtonMap = "lrm";
+
+    };
+  };
 
   i18n.defaultLocale = "en_GB.UTF-8";
 
