@@ -279,6 +279,9 @@
   programs.alacritty = {
     enable = true;
     settings = {
+      window = {
+        decorations = "none";
+      };
       mouse = {
         hide_when_typing = true;
       };
@@ -288,7 +291,7 @@
           family = "DroidSansM Nerd Font";
           style = "Regular";
         };
-        size = 8;
+        size = 12;
       };
     };
   };
