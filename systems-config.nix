@@ -124,7 +124,7 @@
         ids = [ "*" ];
         settings = {
           main = {
-            capslock = "esc";
+            capslock = "layer(shift)";
           };
           shift = {
             capslock = "capslock";
