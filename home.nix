@@ -25,6 +25,7 @@
     ripgrep
     btop
     hexyl
+    hextazy
     mgba
     thunderbird
   ];
