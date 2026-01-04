@@ -13,6 +13,8 @@
   environment.systemPackages = with pkgs; [
     framework-tool
     framework-tool-tui
+    file
+    p7zip
     bitwarden-desktop
     alacritty
     xorg.xinput
