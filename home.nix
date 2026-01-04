@@ -30,6 +30,13 @@
     thunderbird
   ];
 
+  # services.spotifyd = {
+  #   enable = true;
+  #   settings = {
+
+  #   };
+  # };
+
   programs.vesktop = {
     enable = true;
     vencord.settings = {
