@@ -18,10 +18,13 @@
   environment.systemPackages = with pkgs; [
     mangohud
     protonup-qt
+    protontricks
+    scanmem
+    jdk17
     # lutris
     # bottles
     # heroic
-    # wineWowPackages.full
-    # winetricks
+    wineWowPackages.full
+    winetricks
   ];
 }
