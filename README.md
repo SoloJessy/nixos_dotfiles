@@ -6,6 +6,12 @@ This file contains bare bones packages to setup my environment.
 
 it also inputs other files that setup things that are not configured using home-manager.
 
+## Razer mouse config
+
+To configure the Razer mouse on a hardware level, launch a Windows VM and pass the mouse over USB to it. Use Razer synapse 4 to configure.
+
+after any adjustments, configure what you want those keys to do in a 'razer.nix'.
+
 ## flake.nix
 
 This file sets up package versioning to ensure reproducabity.

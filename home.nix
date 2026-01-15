@@ -13,7 +13,6 @@
   home.homeDirectory = "/home/jessy";
 
   home.packages = with pkgs; [
-    polychromatic
     bacon
     cargo-info
     ncspot
@@ -277,11 +276,6 @@
       cat = "bat -s";
       # rustdoc = "firefox result/share/doc/rust/html/index.html";
     };
-    bashrcExtra = lib.concatLines [
-      "razer-cli --dpi 300"
-      "razer-cli --poll 1000"
-      # "razer-cli --battery 10"
-    ];
   };
 
   programs.alacritty = {

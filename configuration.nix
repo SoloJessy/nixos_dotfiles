@@ -8,6 +8,7 @@
     # ./desktopEnvironments/gnome.nix
     # ./desktopEnvironments/i3-base.nix
     ./virt.nix
+    ./razer.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -20,8 +21,6 @@
     xorg.xinput
     helix
     git
-    openrazer-daemon
-    razer-cli
     man-pages
     man-pages-posix
     firefox
