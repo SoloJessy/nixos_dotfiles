@@ -7,7 +7,7 @@
     ./desktopEnvironments/cosmic-base.nix
     # ./desktopEnvironments/gnome.nix
     # ./desktopEnvironments/i3-base.nix
-    # ./virt.nix
+    ./virt.nix
   ];
 
   environment.systemPackages = with pkgs; [
