@@ -27,6 +27,7 @@
     hextazy
     mgba
     thunderbird
+    cheese
   ];
 
   # services.spotifyd = {
