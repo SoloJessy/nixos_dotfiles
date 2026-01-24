@@ -11,10 +11,10 @@
   networking.hostName = "nixos";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  # networking.networkmanager.enable = true;
 
   # Enable network manager applet
-  programs.nm-applet.enable = true;
+  # programs.nm-applet.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -44,7 +44,6 @@
       };
     };
   };
-  hardware.openrazer.enable = true;
   services.fprintd.enable = true;
 
   services.libinput = {
@@ -52,7 +51,7 @@
     touchpad = {
       sendEventsMode = "disabled-on-external-mouse";
       tappingButtonMap = "lrm";
-
+      disableWhileTyping = true;
     };
   };
 
