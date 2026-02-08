@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -50,6 +50,12 @@
     tod = {
       enable = true;
       driver = pkgs.libfprint-2-tod1-goodix;
+    };
+  };
+
+  security.pam.services = {
+    greetd = {
+      fprintAuth = false;
     };
   };
 
@@ -113,8 +119,8 @@
   };
 
   # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "jessy";
+  # services.displayManager.autoLogin.enable = true;
+  # services.displayManager.autoLogin.user = "jessy";
 
   system.stateVersion = "25.05"; # Did you read the comment?
 

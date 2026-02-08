@@ -28,6 +28,7 @@
     mgba
     thunderbird
     cheese
+    freecad
   ];
 
   # services.spotifyd = {
