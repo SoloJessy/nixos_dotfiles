@@ -10,6 +10,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nix-mineral.url = "github:cynicsketch/nix-mineral/";
   };
 
   outputs =
@@ -19,10 +20,13 @@
       fenix,
       nixos-hardware,
       ...
-    }:
+    }@inputs:
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs;
+        };
         modules = [
           ./configuration.nix
           nixos-hardware.nixosModules.framework-16-amd-ai-300-series
