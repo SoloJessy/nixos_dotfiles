@@ -32,6 +32,7 @@
     freecad
   ];
 
+
   # services.spotifyd = {
   #   enable = true;
   #   settings = {
@@ -96,7 +97,7 @@
       ltex-ls-plus
     ];
     settings = {
-      theme = "monokai_pro_spectrum";
+      theme = lib.mkDefault "monokai_pro_spectrum";
       editor = {
         line-number = "relative";
         rulers = [ 80 ];
@@ -201,7 +202,7 @@
 
   programs.bat = {
     enable = true;
-    config.theme = "onehalfdark";
+    # config.theme = "onehalfdark";
   };
 
   programs.zoxide = {
@@ -293,7 +294,7 @@
       font = {
         normal = {
           # family = "droid sans mono";
-          family = "DroidSansM Nerd Font";
+          family = lib.mkForce "DroidSansM Nerd Font";
           style = "Regular";
         };
         size = 12;

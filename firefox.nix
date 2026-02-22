@@ -10,8 +10,13 @@ let
   };
 in
 {
+  stylix.targets.firefox.profileNames = [ "jessy" ];
   programs.firefox = {
     enable = true;
+    profiles.jessy = {
+      isDefault = true;
+      path = "vedigycw.default";
+    };
     package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
       extraPolicies = {
         DisableTelemetry = true;
@@ -46,7 +51,7 @@ in
         };
         Preferences = {
           "browser.tabs.closeWindowWithLastTab" = lock-false;
-          "sidebar.verticalTabs" = lock-true;
+          "sidebar.verticalTabs" = true;
           "browser.aboutConfig.showWarning" = lock-false;
           "browser.topsites.contile.enabled" = lock-false;
           "browser.formfill.enable" = lock-false;
@@ -59,6 +64,7 @@ in
           "browser.newtabpage.activity-stream.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
+          "widget.gtk.libadwaita-colors.enabled" = lock-false;
         };
         ExtensionSettings = {
           # Ublock Origin

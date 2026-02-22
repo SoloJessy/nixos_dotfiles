@@ -5,6 +5,10 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     fenix = {
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,6 +22,7 @@
       home-manager,
       fenix,
       nixos-hardware,
+      stylix,
       ...
     }:
     {
@@ -25,6 +30,7 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
+          stylix.nixosModules.stylix
           nixos-hardware.nixosModules.framework-16-amd-ai-300-series
           home-manager.nixosModules.home-manager
           {
