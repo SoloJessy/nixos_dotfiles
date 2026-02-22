@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     bacon
+    qalculate-qt
     cargo-info
     ncspot
     rusty-man
