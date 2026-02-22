@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -9,13 +9,7 @@
     # ./desktopEnvironments/i3-base.nix
     ./virt.nix
     ./razer.nix
-    inputs.nix-mineral.nixpsModules.nix-mineral
   ];
-
-  nix-mineral = {
-    enable = true;
-    preset = "default";
-  };
 
   environment.systemPackages = with pkgs; [
     framework-tool
