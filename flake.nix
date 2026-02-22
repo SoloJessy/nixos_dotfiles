@@ -51,6 +51,7 @@
                 ])
                 pkgs.rust-analyzer-nightly
                 pkgs.gcc
+                pkgs.cargo-audit
               ];
             }
           )
