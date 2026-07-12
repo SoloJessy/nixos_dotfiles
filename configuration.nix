@@ -9,10 +9,15 @@
     # ./desktopEnvironments/i3-base.nix
     ./virt.nix
     ./razer.nix
+    ./devel.nix
   ];
 
   stylix = {
     enable = true;
+    targets = {
+      gtk.enable = false;
+      gtksourceview.enable = false;
+    };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/monokai.yaml";
     override = {
       # inspired by Monokai Pro Spectrum
@@ -41,14 +46,17 @@
     framework-tool-tui
     file
     p7zip
-    bitwarden-desktop
+    # bitwarden-desktop
+    qbittorrent
+    spotify
     alacritty
-    xorg.xinput
+    xinput
     helix
     git
     man-pages
     man-pages-posix
     firefox
+    tor-browser
     libreoffice
     hunspell
     hunspellDicts.en_GB-ise

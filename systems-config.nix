@@ -132,6 +132,14 @@
     ];
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = [ "weekly" ];
+    randomizedDelaySec = "45s";
+    options = "--delete-older-than 90d";
+  };
+
+  services.udisks2.enable = true;
   # Enable automatic login for the user.
   # services.displayManager.autoLogin.enable = true;
   # services.displayManager.autoLogin.user = "jessy";
@@ -150,7 +158,8 @@
         ids = [ "*" ];
         settings = {
           main = {
-            capslock = "layer(shift)";
+            # capslock = "layer(shift)";
+            capslock = "esc";
           };
           shift = {
             capslock = "capslock";

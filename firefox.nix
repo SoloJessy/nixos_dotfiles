@@ -13,6 +13,7 @@ in
   stylix.targets.firefox.profileNames = [ "jessy" ];
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     profiles.jessy = {
       isDefault = true;
       path = "vedigycw.default";

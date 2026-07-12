@@ -32,6 +32,8 @@
     freecad
   ];
 
+  xdg.configFile."gtk-3.0/gtk.css".force = true;
+  xdg.configFile."gtk-4.0/gtk.css".force = true;
 
   # services.spotifyd = {
   #   enable = true;
@@ -55,6 +57,10 @@
         WatchTogetherAdbock.enabled = true;
       };
     };
+  };
+
+  services.udiskie = {
+    enable = true;
   };
 
   programs.nyxt = {
@@ -85,6 +91,7 @@
   programs.yazi = {
     enable = true;
     enableBashIntegration = true;
+    shellWrapperName = "y";
   };
 
   programs.helix = {
@@ -93,7 +100,7 @@
     extraPackages = with pkgs; [
       nil
       marksman
-      nodePackages.prettier
+      prettier
       ltex-ls-plus
     ];
     settings = {
@@ -141,7 +148,7 @@
           soft-wrap.wrap-indicator = "";
           soft-wrap.wrap-at-text-width = true;
           formatter = {
-            command = "${pkgs.nodePackages.prettier}/bin/prettier";
+            command = "${pkgs.prettier}/bin/prettier";
             args = [
               "--parser"
               "markdown"
